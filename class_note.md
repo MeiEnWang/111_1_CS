@@ -65,7 +65,7 @@
 -	nano：編輯文檔
     - Ctrl + C：顯示游標所在
     - Ctrl + W：查詢命令，按下後會跳轉到末行的反白位置，輸入要查詢的內容再按 enter 即可
--	<font color=#0072E3>壓縮檔案：</font>
+-	壓縮檔案：
     - gzip
         - 壓縮：gzip Filename
         - 解壓縮：
@@ -77,7 +77,7 @@
     - tar.gz
          - 壓縮：tar -zcvf FileName.tar.gz DirName
          - 解壓縮：tar -zxvf FileName.tar.gz
--	<font color=#0072E3>檔案搜尋：</font>
+-	檔案搜尋：
     - Find [path] [option] [action] filename
         - option：
           - -size
