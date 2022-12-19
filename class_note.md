@@ -1,4 +1,4 @@
-# **計概實習上課筆記**
+# **計概實習課筆記**
 
 同步更新步驟：
 1. git fetch（抓取雲端資料）
@@ -78,7 +78,7 @@
          - 壓縮：tar -zcvf FileName.tar.gz DirName
          - 解壓縮：tar -zxvf FileName.tar.gz
 -	檔案搜尋：
-    - Find [path] [option] [action] filename
+    - find [path] [option] [action] filename
         - option：
           - -size
                 - 例：-size +500M（找出大於500M的檔案）
