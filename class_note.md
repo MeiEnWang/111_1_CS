@@ -50,49 +50,49 @@
 -	chmod：更改使用者權限
     - chomd [擁有者權限][群組權限][其他人權限] filename
     - 例1：
-     - chomd 755 testfile
-     - 755：[4+2+1][4+1][4+1]
+        - chomd 755 testfile
+        - 755：[4+2+1][4+1][4+1]
     - 例2：
-     - chomd u=rxw,g=rx,o=rx testfile
-     - chomd o+w testfile
-     - chomd a-x testfile
-     - u=user 擁有者
-     - g=group 群組
-     - o=other 其他人
-     - a=all 全部人
+        - chomd u=rxw,g=rx,o=rx testfile
+        - chomd o+w testfile
+        - chomd a-x testfile
+        - u=user 擁有者
+        - g=group 群組
+        - o=other 其他人
+        - a=all 全部人
 -	nano：編輯文檔
     - Ctrl + C：顯示游標所在
     - Ctrl + W：查詢命令，按下後會跳轉到末行的反白位置，輸入要查詢的內容再按 enter 即可
 -	壓縮檔案：
     - gzip
-     - 壓縮：gzip Filename
-     - 解壓縮：
-      - gunzip FileName.gz
-      - gzip -d FileName.gz
+        - 壓縮：gzip Filename
+        - 解壓縮：
+            - gunzip FileName.gz
+            - gzip -d FileName.gz
     - xz
-     - 壓縮：xz -z FileName
-     - 解壓縮：xz -d FileName.xz
+        - 壓縮：xz -z FileName
+        - 解壓縮：xz -d FileName.xz
     - tar.gz
-     - 壓縮：tar -zcvf FileName.tar.gz DirName
-     - 解壓縮：tar -zxvf FileName.tar.gz
+         - 壓縮：tar -zcvf FileName.tar.gz DirName
+         - 解壓縮：tar -zxvf FileName.tar.gz
 -	檔案搜尋
     - Find [path] [option] [action] filename
-     - option：
-      - -size
-       - 例：-size +500M（找出大於500M的檔案）
-      - -name
-       - 例：-name “.jpg”（找出照片檔）
-      - -type
-       - 例1：-type f（一般檔案）
-       - 例2：-type d（一般目錄）
-      - -user
-       - 例：-user user1 -o -user user2（同時找兩個擁有者的檔案）
+        - option：
+          - -size
+                - 例：-size +500M（找出大於500M的檔案）
+          - -name
+                - 例：-name “.jpg”（找出照片檔）
+          - -type
+               - 例1：-type f（一般檔案）
+               - 例2：-type d（一般目錄）
+          - -user
+                - 例：-user user1 -o -user user2（同時找兩個擁有者的檔案）
     - which filename
-     - -a：系統會顯示所有被找到的命令執行檔之完整路徑
-     - -n<文件名長度>：指定文件名長度，指定的長度必須大於或等於所有文件中最常的文件名
-     - -p<文件名長度>：與-n參數相同，但此處的<文件名長度>包含文件的路徑
-     - -w：指定輸出欄位的寬度
-     - -V：顯示版本訊息
+        - -a：系統會顯示所有被找到的命令執行檔之完整路徑
+        - -n<文件名長度>：指定文件名長度，指定的長度必須大於或等於所有文件中最常的文件名
+        - -p<文件名長度>：與-n參數相同，但此處的<文件名長度>包含文件的路徑
+        - -w：指定輸出欄位的寬度
+        - -V：顯示版本訊息
 -------------------------------------------
 【目錄】
 -	. ：此層目錄
