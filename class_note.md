@@ -245,8 +245,58 @@
             - 被執行的次數是依據被讀取文字輸入檔有多少行來決定，一般都是在這區塊做資料的判斷統計，可以在 pattern 中加入一些判斷式，來決定要不要執行 action
         - 第三步執行 END 語句
             - 輸出統計完的結果（存到檔案，或是傳到標準輸出）
-
-
+    - awk 算數運算子：
+        - awk '$2 + $3 >= 160 {print $0}' filename
+    - awk 關係運算子：
+        - awk '{if ($3 == 120) print $0}' filename
+    - awk 邏輯運算子：
+        - awk '($2 > 6) && ($3 >= 150) {print $0}' filename
+        - &&：and 的意思
+        - ||：or 的意思
+    - awk 正則運算子：
+        - awk '{if ($3 ~ /0/) print $0}' filename
+        - ~：Matched by reg exp
+        - !~：Not matched by req exp
+    - awk 賦值運算子：
+        - awk '{for (j=1; j <= NF; j++) { print $j }}' filename
+        - =
+        - ++：每次加 1
+        - --：每次減 1
+        - +=
+        - -=
+        - *=
+        - /=
+        - %=
+        - ^=
+- sed：
+    1. 「stream editor」的縮寫，顧名思義是進行串流 (stream) 的編輯
+    2. 字串取代、複製、刪除的功能
+    3. 自動化的修改文字檔
+    - sed [option] '[n1,n2] [command] / [pattern] / [replacement] / [flag]' file.txt
+        - option：以 - 符號開頭的功能，如：-n、-r、-i，皆可省略
+        - n1, n2：代表開始行數和結尾行數，不輸入代表每行都會執行 command
+        - command：進行的動作，如：s, a, c, d, i
+        - pattern：給 command 使用的參數
+        - replacement：當使用 s 指令時會使用
+        - flag：當使用 s 指令時會使用
+    - sed [-nefi] '[n1,n2] [command] / [pattern] / [replacement] / [flag]' file.txt
+        - option：
+            - -n：沉默模式，只有經過 sed 處理的那行才會被印出
+            - -e：直接在命令模式編輯，預設
+            - -f：直接將 sed 動作寫在一個檔案內，-f file 會直接執行 file 裡面的動作
+            - -i：修改檔案
+        - command：
+            - a：新增，在下一行插入字串，未指定行數的話，則是在每一行之後插入字串
+            - c：取代，取代指定行數的內容
+            - d：刪除，後面通常不接任何東西
+            - i：插入，在指定行數的前一行插入字串
+            - p：印出，只印出受影響的行，常搭配 -n 使用
+            - s：搜尋、取代，最常用的指令，可搭配正規表達式使用，將搜尋的內容進行取代
+        - flag：
+            - g：全部取代
+            - [0-9]：每行第幾次出現
+            - I：忽略大小寫
+            - w：把符合的結果寫入檔案
 
 > Grep、Awk、Sed 比較
 - grep：文字處理&搜尋工具
@@ -260,10 +310,3 @@
     - 一次處理一行內容，可搭配正規表達法
     - 主要用來自動編輯一個或多個檔案，簡化對檔案的反覆操作
     - 用於行間的內容操作，如新增、刪除、修改、查詢、替換
-
-
-
-
-
-
-
