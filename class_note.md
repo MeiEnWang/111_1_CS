@@ -247,27 +247,44 @@
             - 輸出統計完的結果（存到檔案，或是傳到標準輸出）
     - awk 算數運算子：
         - awk '$2 + $3 >= 160 {print $0}' filename
+        - operator：
+            - +
+            - -
+            - *
+            - /
+            - %：整除
+            - ^：指數
     - awk 關係運算子：
         - awk '{if ($3 == 120) print $0}' filename
+        - operator：
+            - <
+            - <=
+            - ==
+            - !=
+            - >
+            - >=
     - awk 邏輯運算子：
         - awk '($2 > 6) && ($3 >= 150) {print $0}' filename
-        - &&：and 的意思
-        - ||：or 的意思
+        - operator：
+            - &&：and 的意思
+            - ||：or 的意思
     - awk 正則運算子：
         - awk '{if ($3 ~ /0/) print $0}' filename
-        - ~：Matched by reg exp
-        - !~：Not matched by req exp
+        - operator：
+            - ~：Matched by reg exp
+            - !~：Not matched by req exp
     - awk 賦值運算子：
         - awk '{for (j=1; j <= NF; j++) { print $j }}' filename
-        - =
-        - ++：每次加 1
-        - --：每次減 1
-        - +=
-        - -=
-        - *=
-        - /=
-        - %=
-        - ^=
+        - operator：
+            - =
+            - ++：每次加 1
+            - --：每次減 1
+            - +=
+            - -=
+            - *=
+            - /=
+            - %=
+            - ^=
 - sed：
     1. 「stream editor」的縮寫，顧名思義是進行串流 (stream) 的編輯
     2. 字串取代、複製、刪除的功能
