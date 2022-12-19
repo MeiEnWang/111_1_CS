@@ -28,18 +28,18 @@
 -	vi / vim：編輯文檔（後者相當於升級版）
     - 一般模式：可使用上下左右進行游標移動
     - 編輯模式：編輯文字、刪除字元及複製貼上檔案資料
-     - :w = 存檔
-     - :q = 離開
-     - :q! = 強制離開不存檔
-     - :wq = 存檔後離開
-     - :w[filename] = 另存新檔
-     - :r[filename] = 在編輯的資料中讀入另一個檔案的資料
-     - :n1,n2 w[filename] = 將n1到n2的內容儲存成filename這個檔案
+        - :w = 存檔
+        - :q = 離開
+        - :q! = 強制離開不存檔
+        - :wq = 存檔後離開
+        - :w[filename] = 另存新檔
+        - :r[filename] = 在編輯的資料中讀入另一個檔案的資料
+        - :n1,n2 w[filename] = 將n1到n2的內容儲存成filename這個檔案
     - 一般模式 -> 編輯模式：ESC 或 Ctrl + [
     - 編輯模式 -> 一般模式：
-     - i = insert
-     - a = append
-     - o = new line
+        - i = insert
+        - a = append
+        - o = new line
 -	mkdir：建立一個新目錄
 -	mkdir -p：同時建立多個目錄
 -	rmdir：刪除一個空目錄
